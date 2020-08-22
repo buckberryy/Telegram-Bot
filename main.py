@@ -46,9 +46,11 @@ def bop(update, context):
 
 
 def olcay(update, context):
-    update.message.reply_text("Merhaba patron")
-
-
+    question = str(context.args[0])
+    if(question == "nasılsın"):
+        update.message.reply_text("İyiyim, sen nasılsın ?")
+    else:
+        update.message.reply_text("Merhaba..")
 """
 
 def echo(update, context):
@@ -62,7 +64,7 @@ def musicCreate(update, context):
 
 
 def getYoutubeandCorona():
-    browser = webdriver.Firefox()
+    browser = webdriver.Chrome()
     browser.get(
         "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbFZMenoyc2FKcEtVR0JrMXFxMW95MA%3D%3D")
     user_data = browser.find_elements_by_xpath('//*[@id="video-title"]')
@@ -92,7 +94,7 @@ def covid(update, context):
     update.message.reply_text("Türkiye Günlük Korona Virüsü Tablosu")
 
 def doviz(update,context):
-    browser = webdriver.Firefox()
+    browser = webdriver.Chrome()
 
     browser.get(
         "https://www.doviz.com")
@@ -121,7 +123,7 @@ def start(update, context):
 
 
 def main():
-    updater = Updater('BOT_TOKEN_HERE', use_context=True)
+    updater = Updater('BOT_TOKEN', use_context=True)
     dp = updater.dispatcher
 
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -130,10 +132,14 @@ def main():
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('kopek', bop))
     dp.add_handler(CommandHandler('youtube', youtube))
-    dp.add_handler(CommandHandler('olcay', olcay))
     dp.add_handler(CommandHandler('oneri', musicCreate))
     dp.add_handler(CommandHandler('covid', covid))
     dp.add_handler(CommandHandler('doviz', doviz))
+    dp.add_handler(CommandHandler('olcay', olcay,
+                                  pass_args=True,
+                                  pass_job_queue=True,
+                                  pass_chat_data=True
+                                  ))
 
     """dp.add_handler(MessageHandler(Filters.text, echo)) eğer yazılan mesaja cevap olarak yazdığı stringin dönmesini istiyorsak"""
     updater.start_polling()
