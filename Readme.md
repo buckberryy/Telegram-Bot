@@ -12,13 +12,13 @@ Chromium : https://chromedriver.storage.googleapis.com/index.html?path=84.0.4147
 ## Komutlar
 
 ``` 
-/start : Komutların bir listesini gösterir.
-/youtube : Youtube Müzik üzerinde trendlerden rastgele seçim yapar.
-/covid : Güncel Covid vaka sayılarını gösterir.
-/doviz : Güncel döviz kurlarını gösterir.
-/oneri : Listeden rastgele bir şarkı gönderir.
-/kopek : Rastgele bir köpek resmi gönderir.
-/olcay : "Merhaba" cevabı döndürür.
+/start 		: Komutların bir listesini gösterir.
+/youtube 	: Youtube Müzik üzerinde trendlerden rastgele seçim yapar.
+/covid 		: Güncel Covid vaka sayılarını gösterir.
+/doviz 		: Güncel döviz kurlarını gösterir.
+/oneri 		: Listeden rastgele bir şarkı gönderir.
+/kopek 		: Rastgele bir köpek resmi gönderir.
+/olcay 		: "Merhaba" cevabı döndürür.
 /olcay nasılsın : "İyiyim, Sen nasılsın" cevabı döndürür.
 ```
 
