@@ -7,6 +7,7 @@ Telegram Python Kütüphanesi : python-telegram-bot
 							  https://python-telegram-bot.readthedocs.io/en/stable/
 
 GeckoDriver: https://github.com/mozilla/geckodriver/releases
+
 Chromium : https://chromedriver.storage.googleapis.com/index.html?path=84.0.4147.30/
 ## Komutlar
 
